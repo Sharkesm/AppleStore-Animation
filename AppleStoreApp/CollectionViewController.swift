@@ -12,6 +12,8 @@ class CollectionViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    fileprivate var selectedCell: UICollectionViewCell?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,10 +51,19 @@ extension CollectionViewController: UICollectionViewDataSource {
 extension CollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedCell = self.collectionView.cellForItem(at: indexPath)
+        
         let vc = DetailViewController.instantiate()
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.navigationBar.isHidden = true
-        present(navigationController, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
+extension CollectionViewController: APAnimatable {
+    var containerView: UIView? {
+        return self.collectionView
+    }
+    
+    var childView: UIView? {
+        return self.selectedCell
+    }
+}

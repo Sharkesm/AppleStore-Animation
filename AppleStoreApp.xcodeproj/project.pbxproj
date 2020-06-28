@@ -22,6 +22,9 @@
 		63564F1A24A6615A004FDF70 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63564F1924A6615A004FDF70 /* CardCell.xib */; };
 		63564F1C24A7863A004FDF70 /* CollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63564F1B24A7863A004FDF70 /* CollectionView++.swift */; };
 		63564F1E24A79EA4004FDF70 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63564F1D24A79EA4004FDF70 /* ShadowView.swift */; };
+		639A73FC24A89A2000DB8AD7 /* APTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A73FB24A89A2000DB8AD7 /* APTransitionAnimation.swift */; };
+		639A740224A89D6400DB8AD7 /* APNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A740124A89D6400DB8AD7 /* APNavigationController.swift */; };
+		639A740424A8A72000DB8AD7 /* APAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A740324A8A72000DB8AD7 /* APAnimatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		63564F1924A6615A004FDF70 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		63564F1B24A7863A004FDF70 /* CollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView++.swift"; sourceTree = "<group>"; };
 		63564F1D24A79EA4004FDF70 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		639A73FB24A89A2000DB8AD7 /* APTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTransitionAnimation.swift; sourceTree = "<group>"; };
+		639A740124A89D6400DB8AD7 /* APNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNavigationController.swift; sourceTree = "<group>"; };
+		639A740324A8A72000DB8AD7 /* APAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APAnimatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 				63564F1024A65908004FDF70 /* Protocols */,
 				63564F0A24A656F3004FDF70 /* Cells */,
 				63564F1D24A79EA4004FDF70 /* ShadowView.swift */,
+				639A73FB24A89A2000DB8AD7 /* APTransitionAnimation.swift */,
+				639A740124A89D6400DB8AD7 /* APNavigationController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 				63564F1524A65E78004FDF70 /* StoryboardBased.swift */,
 				63564F1724A65F2E004FDF70 /* StoryboardSceneBased.swift */,
 				63564F1B24A7863A004FDF70 /* CollectionView++.swift */,
+				639A740324A8A72000DB8AD7 /* APAnimatable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -198,14 +207,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639A740224A89D6400DB8AD7 /* APNavigationController.swift in Sources */,
 				63564F1624A65E78004FDF70 /* StoryboardBased.swift in Sources */,
 				63564F1E24A79EA4004FDF70 /* ShadowView.swift in Sources */,
 				63564F1224A6591A004FDF70 /* NibLoader.swift in Sources */,
 				63564F1C24A7863A004FDF70 /* CollectionView++.swift in Sources */,
 				63564F1824A65F2E004FDF70 /* StoryboardSceneBased.swift in Sources */,
 				63564EF524A64FF7004FDF70 /* CollectionViewController.swift in Sources */,
+				639A73FC24A89A2000DB8AD7 /* APTransitionAnimation.swift in Sources */,
 				63564F0524A653CA004FDF70 /* NavigationController.swift in Sources */,
 				63564F0E24A65753004FDF70 /* DetailViewController.swift in Sources */,
+				639A740424A8A72000DB8AD7 /* APAnimatable.swift in Sources */,
 				63564EF124A64FF7004FDF70 /* AppDelegate.swift in Sources */,
 				63564F0C24A65728004FDF70 /* CardCell.swift in Sources */,
 				63564F1424A65BD9004FDF70 /* Reusable.swift in Sources */,
@@ -284,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -338,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -352,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87XLAJ742B;
 				INFOPLIST_FILE = AppleStoreApp/Info.plist;
@@ -361,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharkesmonken.AppleStoreApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,8 +384,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 87XLAJ742B;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppleStoreApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,6 +394,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharkesmonken.AppleStoreApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
